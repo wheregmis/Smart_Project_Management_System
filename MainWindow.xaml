@@ -1,0 +1,38 @@
+﻿<Window x:Class="SPMS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPMS"
+        mc:Ignorable="d"
+        Title="Welcome to SMART Project Management System" Height="720" Width="1280"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+    
+        >
+
+    <Window.Background>
+        <ImageBrush ImageSource="com.project.images/background.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Label  Content="Username" HorizontalAlignment="Left" Margin="909,357,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="23" Margin="995,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="215" RenderTransformOrigin="0.511,-1.058"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="909,439,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="995,439,0,0" VerticalAlignment="Top" Width="215"/>
+        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="1074,503,0,0" VerticalAlignment="Top" Width="94" Click="BtnLogin_Click" Height="53" Background="{x:Null}"/>
+        <Image Margin="863,359,378.6,299.4" Source="com.project.images/icons8_name.ico" Stretch="Fill"/>
+        <Image Margin="863,439,378.6,223.4" Source="com.project.images/icons8_password_6.ico" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="471" Height="114"><Span><Run Text="How it tracks a project??"/></Span><LineBreak/><Span><Run Text="Projects lives within teams, and store tasks. While people work on particular task, they have to estimate the time remaining to complete the task as well as provide the overall work they have done to the tasks so that the project manager have an idea what's going on with the tasks and will help him to deal with the client and give an overview of the projects progress."/></Span></TextBlock>
+        <Label Content="Welcome to SMART Project Management System" HorizontalAlignment="Left" Margin="106,34,0,0" VerticalAlignment="Top" Width="1104" FontSize="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,577,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="471" Height="81"><Span><Run Text="Can we assign anyone in the project??"/></Span><LineBreak/><Span><Run Text="No, after creating a project, there will be multiple task under the project. And certain skills are required to complete the task thus you can only assign the people who have that specific skill that is required to complete that task."/></Span></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="275,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="471" Height="114"><Span><Run Text="What makes it different from another PMS??"/></Span><LineBreak/><Run Text="While many of the project management system focuses on task prioritization, this project management system focuses on every single aspect that might make a project success including technical; procedures, methodologies and also brings features like 360 Evaluation and Problem Tracking."/></TextBlock>
+        <Label Content="Please Login to get started !!!" HorizontalAlignment="Left" Margin="886,254,0,0" VerticalAlignment="Top" Height="56" Width="282" FontSize="20"/>
+        <Image HorizontalAlignment="Left" Height="134" Margin="70,176,0,0" VerticalAlignment="Top" Width="148" Source="com.project.images/icons8_school_52px_1.png"/>
+        <Image HorizontalAlignment="Left" Height="132" Margin="70,359,0,0" VerticalAlignment="Top" Width="148" Source="com.project.images/icons8_human_footprints_52px.png"/>
+        <Image HorizontalAlignment="Left" Height="125" Margin="75,533,0,0" VerticalAlignment="Top" Width="143" Source="com.project.images/icons8_sell_52px.png"/>
+
+    </Grid>
+</Window>
