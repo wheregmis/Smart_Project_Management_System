@@ -1,0 +1,28 @@
+﻿<Window x:Class="SPMS.com.project.views.employeePanel.ActivityMonitor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPMS.com.project.views.employeePanel"
+        mc:Ignorable="d"
+        Title="ActivityMonitor" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/SPMS;component/com.project.images/background.jpg"/>
+    </Window.Background>
+    <Grid>
+        <ListView x:Name="ListProject" HorizontalAlignment="Left" Height="328" Margin="33,62,0,0" VerticalAlignment="Top" Width="733" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Employee Name" DisplayMemberBinding="{Binding EMPLOYEE_NAME}"/>
+                    <GridViewColumn Header="Task Name" DisplayMemberBinding="{Binding TASK_NAME}"/>
+                    <GridViewColumn Header="Progress" DisplayMemberBinding="{Binding ESTIMATED_PROGRESS}"/>
+                    <GridViewColumn Header="Estimated Remaining" DisplayMemberBinding="{Binding ESTIMATED_REMAINING_HOUR}"/>
+                    <GridViewColumn Header="Sentiment " DisplayMemberBinding="{Binding FEEDBACK_SENTIMENT}"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Your Assigned Employees Progress Monitor" HorizontalAlignment="Left" Margin="199,10,0,0" VerticalAlignment="Top" Width="406" FontSize="20"/>
+
+    </Grid>
+</Window>

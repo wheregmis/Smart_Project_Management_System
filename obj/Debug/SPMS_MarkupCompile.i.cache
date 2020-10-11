@@ -1,0 +1,20 @@
+﻿SPMS
+
+
+winexe
+C#
+.cs
+F:\PP CODING\SPMS\obj\Debug\
+SPMS
+none
+false
+DEBUG;TRACE
+F:\PP CODING\SPMS\App.xaml
+18-925899010
+3-2143693768
+42725111500
+139129439862
+com.project.views\adminPanel\Add Skills.xaml;com.project.views\adminPanel\AddUser.xaml;com.project.views\adminPanel\AdminDashboard.xaml;com.project.views\adminPanel\ViewAllProjects.xaml;com.project.views\employeePanel\ActivityMonitor.xaml;com.project.views\employeePanel\AddTask.xaml;com.project.views\employeePanel\CreateProject.xaml;com.project.views\employeePanel\CreateTask.xaml;com.project.views\employeePanel\ManageIssues.xaml;com.project.views\employeePanel\TaskWindow.xaml;com.project.views\employeePanel\UpdateProfile.xaml;com.project.views\employeePanel\UpdateSkill.xaml;com.project.views\employeePanel\UserDashboard.xaml;com.project.views\employeePanel\ViewProjects.xaml;com.project.views\issueview\IssueForm.xaml;com.project.views\issueview\ReportIssue.xaml;com.project.views\reviewuis\ReviewOthers.xaml;MainWindow.xaml;
+com.project.images\logo.jpg
+True
+

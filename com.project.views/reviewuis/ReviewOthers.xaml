@@ -1,0 +1,39 @@
+﻿<Window x:Class="SPMS.com.project.views.reviewuis.ReviewOthers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPMS.com.project.views.reviewuis"
+        mc:Ignorable="d"
+        Title="ReviewOthers" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/SPMS;component/com.project.images/background.jpg"/>
+        </Grid.Background>
+        <Label Content="Review other" HorizontalAlignment="Left" Margin="329,22,0,0" VerticalAlignment="Top" Height="29" Width="89"/>
+        <Label Content="Review on the Basis of" HorizontalAlignment="Left" Margin="127,69,0,0" VerticalAlignment="Top" Height="29" Width="138"/>
+        <Label Content="Review for" HorizontalAlignment="Left" Margin="127,145,0,0" VerticalAlignment="Top" Height="29" Width="78"/>
+        <ComboBox x:Name="cmbProject" DisplayMemberPath="PROJECT_NAME" SelectedValuePath="PROJECT_ID" HorizontalAlignment="Left" Margin="344,69,0,0" VerticalAlignment="Top" Width="153"/>
+        <ComboBox x:Name="cmbUser" DisplayMemberPath="EMPLOYEE_EMAIL" SelectedValuePath="EMPLOYEE_ID" HorizontalAlignment="Left" Margin="344,145,0,0" VerticalAlignment="Top" Width="153"/>
+        <RichTextBox x:Name="txtReview" HorizontalAlignment="Left" Height="138" Margin="344,196,0,0" VerticalAlignment="Top" Width="161" Background="#FF995EB6">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label Content="Review Description" HorizontalAlignment="Left" Margin="127,192,0,0" VerticalAlignment="Top" Height="29" Width="116"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="422,361,0,0" VerticalAlignment="Top" Width="83" Click="BtnSubmit_Click"/>
+        <Button x:Name="btnAnalyse" Content="Analyze Project" HorizontalAlignment="Left" Margin="543,69,0,0" VerticalAlignment="Top" Width="138" Click="BtnAnalyse_Click"/>
+        <Image HorizontalAlignment="Left" Height="21" Margin="96,69,0,0" VerticalAlignment="Top" Width="26" Source="/SPMS;component/com.project.images/icons8_school_52px_1.png"/>
+        <Image HorizontalAlignment="Left" Height="21" Margin="96,145,0,0" VerticalAlignment="Top" Width="26" Source="/SPMS;component/com.project.images/icons8_name_52px_1.png"/>
+        <Image HorizontalAlignment="Left" Height="21" Margin="96,192,0,0" VerticalAlignment="Top" Width="26" Source="/SPMS;component/com.project.images/icons8_add_to_favorites_52px.png"/>
+        <Button  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="38" Height="38" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/SPMS;component/com.project.images/icons8_left_circular_52px.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="211" Margin="553,169,0,0" VerticalAlignment="Top" Width="183" Source="/SPMS;component/com.project.images/icons8_reviewer_male_240px.png"/>
+
+    </Grid>
+</Window>

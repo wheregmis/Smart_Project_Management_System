@@ -1,0 +1,63 @@
+﻿<Window x:Class="SPMS.com.project.views.adminPanel.AddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPMS.com.project.views.adminPanel"
+        mc:Ignorable="d"
+        Title="AddUser" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/SPMS;component/com.project.images/background.jpg"/>
+        </Grid.Background>
+        <ListView x:Name="listUser" HorizontalAlignment="Left" Height="411" Margin="379,161,0,0" VerticalAlignment="Top" Width="831" SelectionChanged="ListUser_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding EMPLOYEE_ID}"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding EMPLOYEE_NAME}"/>
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding EMPLOYEE_EMAIL}"/>
+                    <GridViewColumn Header="Gender" DisplayMemberBinding="{Binding EMPLOYEE_GENDER}"/>
+                    <GridViewColumn Header="Date of Birth" DisplayMemberBinding="{Binding DATE_OF_BIRTH , StringFormat='yyyy-MM-dd'}"/>
+                    <GridViewColumn Header="Address" DisplayMemberBinding="{Binding ADDRESS}"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="56,272,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="153,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="56,320,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="153,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="56,372,0,0" VerticalAlignment="Top"/>
+        <Label Content="Gender" HorizontalAlignment="Left" Margin="56,413,0,0" VerticalAlignment="Top"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="153,580,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="29"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="153,368,0,0" VerticalAlignment="Top" Width="202" Height="27"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="28,413,0,0" VerticalAlignment="Top" Width="23" Source="/SPMS;component/com.project.images/icons8_female_52px.png"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="28,320,0,0" VerticalAlignment="Top" Width="23"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="28,373,0,0" VerticalAlignment="Top" Width="23" Source="/SPMS;component/com.project.images/icons8_password_52px.png"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="28,320,0,0" VerticalAlignment="Top" Width="23" Source="/SPMS;component/com.project.images/icons8_new_post_52px.png"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="28,276,0,0" VerticalAlignment="Top" Width="23" Source="/SPMS;component/com.project.images/icons8_name_52px_1.png"/>
+        <Button  HorizontalAlignment="Left" Margin="7,10,0,0" VerticalAlignment="Top" Width="38" Height="38" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/SPMS;component/com.project.images/icons8_left_circular_52px.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="56,495,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="23" Margin="153,494,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="28,495,0,0" VerticalAlignment="Top" Width="23" Source="/SPMS;component/com.project.images/icons8_female_52px.png"/>
+        <Label Content="Date of Birth" HorizontalAlignment="Left" Margin="56,459,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="28,459,0,0" VerticalAlignment="Top" Width="23" Source="/SPMS;component/com.project.images/icons8_female_52px.png"/>
+        <DatePicker Name="txtDOB" HorizontalAlignment="Left" Margin="153,461,0,0" VerticalAlignment="Top" Width="202"/>
+        <Label Content="Add Employee For SPMS" HorizontalAlignment="Left" Margin="72,70,0,0" VerticalAlignment="Top" Width="247" FontSize="20"/>
+        <Label Content="List of Employee in SPMS" HorizontalAlignment="Left" Margin="634,106,0,0" VerticalAlignment="Top" Width="247" FontSize="20"/>
+        <Image HorizontalAlignment="Left" Height="148" Margin="117,112,0,0" VerticalAlignment="Top" Width="157" Source="/SPMS;component/com.project.images/icons8_user_240px.png"/>
+        <ComboBox Name="cmbGender" HorizontalAlignment="Left" Margin="154,416,0,0" VerticalAlignment="Top" Width="201" SelectedValuePath="Content">
+            <ComboBoxItem Content="Male"/>
+            <ComboBoxItem Content="Female"/>
+            <ComboBoxItem Content="Others"/>
+        </ComboBox>
+        <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="264,580,0,0" VerticalAlignment="Top" Width="91" Height="29" Click="BtnDelete_Click"/>
+        <RadioButton Name="rdoAdmin" Content="System Admin" HorizontalAlignment="Left" Margin="260,548,0,0" VerticalAlignment="Top" Checked="radioButton1_Checked"/>
+        <RadioButton Name="rdoEmploye" Content="Employee" HorizontalAlignment="Left" Margin="154,548,0,0" VerticalAlignment="Top" Checked="radioButton1_Checked"/>
+
+    </Grid>
+</Window>

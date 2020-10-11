@@ -1,0 +1,66 @@
+﻿<Window x:Class="SPMS.com.project.views.employeePanel.CreateTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPMS.com.project.views.employeePanel"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="CreateTask" Height="720" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/SPMS;component/com.project.images/background.jpg"/>
+        </Grid.Background>
+        <lvc:PieChart Name="PieProject" Series="{Binding SeriesCollection}" LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}" Margin="592,72,62.6,342.4">
+
+        </lvc:PieChart>
+        <ListView x:Name="ListTask" HorizontalAlignment="Left" Height="210" Margin="50,390,0,0" VerticalAlignment="Top" Width="1131" MouseDoubleClick="mouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Header="ID" DisplayMemberBinding="{Binding TASK_ID}"/>
+                    <GridViewColumn Header="Task Name" DisplayMemberBinding="{Binding TASK_NAME}"/>
+                    <GridViewColumn Header="Start Date" DisplayMemberBinding="{Binding TASK_START_DATE, StringFormat='yyyy-MM-dd'}"/>
+                    <GridViewColumn Header="End Date" DisplayMemberBinding="{Binding TASK_END_DATE, StringFormat='yyyy-MM-dd'}"/>
+                    <GridViewColumn Header="Task Status" DisplayMemberBinding="{Binding TASK_STATUS}"/>
+                    <GridViewColumn Header="Estimated Hour" DisplayMemberBinding="{Binding ESTIMATED_REMAINING_HOUR}"/>
+                    <GridViewColumn Header="Estimated Progress (%)" DisplayMemberBinding="{Binding ESTIMATED_PROGRESS}"/>
+
+                    <GridViewColumn Header="Priority" DisplayMemberBinding="{Binding PRIORITY}"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Project Name" HorizontalAlignment="Left" Margin="177,116,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="21" Margin="148,121,0,0" VerticalAlignment="Top" Width="26" Source="/SPMS;component/com.project.images/icons8_school_52px_1.png"/>
+        <Button  HorizontalAlignment="Left" VerticalAlignment="Top" Width="38" Height="38" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/SPMS;component/com.project.images/icons8_left_circular_52px.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtProject" HorizontalAlignment="Left" Height="23" Margin="307,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+        <Label Content="Start Date" HorizontalAlignment="Left" Margin="177,167,0,0" VerticalAlignment="Top"/>
+        <Label Content="End Date" HorizontalAlignment="Left" Margin="177,209,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="txtProjectStartDate" HorizontalAlignment="Left" Margin="307,165,0,0" VerticalAlignment="Top" Width="164"/>
+        <DatePicker x:Name="txtProjectEndDate" HorizontalAlignment="Left" Margin="307,207,0,0" VerticalAlignment="Top" Width="164"/>
+        <Image HorizontalAlignment="Left" Height="21" Margin="148,165,0,0" VerticalAlignment="Top" Width="26" Source="/SPMS;component/com.project.images/icons8_date_to_52px.png"/>
+        <Image HorizontalAlignment="Left" Height="21" Margin="148,207,0,0" VerticalAlignment="Top" Width="26" Source="/SPMS;component/com.project.images/icons8_date_from_52px.png"/>
+        <Button Name="AddTaskButton" Content="Add Tasks" HorizontalAlignment="Left" Margin="307,634,0,0" VerticalAlignment="Top" Width="160" Click="AddTaskButton_Click" Height="34"/>
+        <Button Name="btnUpdateProject" Content="Update Project" HorizontalAlignment="Left" Margin="331,301,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.58,0.813" Click="BtnUpdateProject_Click"/>
+        <RadioButton x:Name="rdoProgress" Content="In Progress" HorizontalAlignment="Left" Margin="270,263,0,0" VerticalAlignment="Top" Checked="radioButton1_Checked"/>
+        <RadioButton x:Name="rdoCompleted"  Content="Completed" HorizontalAlignment="Left" Margin="393,263,0,0" VerticalAlignment="Top" Checked="radioButton1_Checked"/>
+        <RadioButton x:Name="rdoRemaining" Content="Remaining" HorizontalAlignment="Left" Margin="148,263,0,0" VerticalAlignment="Top" Checked="radioButton1_Checked"/>
+        <Button x:Name="btnSubmitStatus" Content="Submit Status" HorizontalAlignment="Left" Margin="148,301,0,0" VerticalAlignment="Top" Width="126" Click="BtnSubmitStatus_Click"/>
+        <Button Name="btnActivity" Content="View Activity Monitor" HorizontalAlignment="Left" Margin="503,635,0,0" VerticalAlignment="Top" Width="200" Height="33" Click="Button_Click_1"/>
+        <Label Content="Your Project Progress Status" HorizontalAlignment="Left" Margin="726,31,0,0" VerticalAlignment="Top" Height="41" Width="359" FontSize="20"/>
+        <Label Content="Project Detail" HorizontalAlignment="Left" Margin="247,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="146" FontSize="20">
+
+        </Label>
+        <Label Content="List of Tasks Created Under this Project" HorizontalAlignment="Left" Margin="331,348,0,0" VerticalAlignment="Top" Width="372" FontSize="20"/>
+        <Button Name="btnDelete" Content="" HorizontalAlignment="Left" Margin="285,301,0,0" VerticalAlignment="Top" Width="32" Height="27" Click="BtnDelete_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/SPMS;component/com.project.images/icons8_delete_52px.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

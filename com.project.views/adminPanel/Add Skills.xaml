@@ -1,0 +1,38 @@
+﻿<Window x:Class="SPMS.com.project.views.adminPanel.Add_Skills"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPMS.com.project.views.adminPanel"
+        mc:Ignorable="d"
+        Title="Add_Skills" Height="500" Width="720" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/SPMS;component/com.project.images/background.jpg"/>
+        </Grid.Background>
+        <Label HorizontalAlignment="Left" Margin="86,222,0,0" VerticalAlignment="Top">
+            <Label Content="Skill"/>
+        </Label>
+        <TextBox Name="txtSkill" HorizontalAlignment="Left" Height="23" Margin="203,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ListView x:Name="listSkill" HorizontalAlignment="Left" Height="295" Margin="378,119,0,0" VerticalAlignment="Top" Width="309">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding SKILL_ID}"/>
+
+                    <GridViewColumn Header="Skill" DisplayMemberBinding="{Binding SKILL_NAME}"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="248,296,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="44,228,0,0" VerticalAlignment="Top" Width="23" Source="/SPMS;component/com.project.images/icons8_idea_52px_1.png"/>
+        <Button  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="38" Height="38" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/SPMS;component/com.project.images/icons8_left_circular_52px.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Add Skills to Your System" HorizontalAlignment="Left" Margin="81,144,0,0" VerticalAlignment="Top" Width="242" FontSize="20"/>
+        <Label Content="List of Skills in Your System" HorizontalAlignment="Left" Margin="395,58,0,0" VerticalAlignment="Top" Width="268" FontSize="20"/>
+
+    </Grid>
+</Window>

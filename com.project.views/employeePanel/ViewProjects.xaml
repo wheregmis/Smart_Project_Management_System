@@ -1,0 +1,26 @@
+﻿<Window x:Class="SPMS.com.project.views.employeePanel.ViewProjects"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPMS.com.project.views.employeePanel"
+        mc:Ignorable="d"
+        Title="ViewProjects" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/SPMS;component/com.project.images/background.jpg"/>
+        </Grid.Background>
+        <ListView x:Name="ListProject" HorizontalAlignment="Left" Height="329" Margin="161,60,0,0" VerticalAlignment="Top" Width="453" MouseDoubleClick="mouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Header="ID" DisplayMemberBinding="{Binding PROJECT_ID}"/>
+                    <GridViewColumn Header="Project Name" DisplayMemberBinding="{Binding PROJECT_NAME}"/>
+                    <GridViewColumn Header="Start Date" DisplayMemberBinding="{Binding PROJECT_START_DATE, StringFormat='yyyy-MM-dd'}"/>
+                    <GridViewColumn Header="End Date" DisplayMemberBinding="{Binding PROJECT_END_DATE, StringFormat='yyyy-MM-dd'}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="List of Projects that you are Assigned" HorizontalAlignment="Left" Margin="223,18,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+    </Grid>
+</Window>

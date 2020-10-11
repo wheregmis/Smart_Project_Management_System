@@ -1,0 +1,31 @@
+﻿<Window x:Class="SPMS.com.project.views.adminPanel.AdminDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="AdminDashboard" Height="550" Width="720" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/SPMS;component/com.project.images/background.jpg"/>
+        </Grid.Background>
+        <Button x:Name="btnUsers" Content="Manage Users" HorizontalAlignment="Left" Margin="49,423,0,0" VerticalAlignment="Top" Width="155" Click="BtnUsers_Click"/>
+        <Button x:Name="btnSkills" Content="Manage Skills" HorizontalAlignment="Left" Margin="292,423,0,0" VerticalAlignment="Top" Width="155" Click="BtnSkills_Click"/>
+        <Button x:Name="btnProjects" Content="Manage Projects" HorizontalAlignment="Left" Margin="510,423,0,0" VerticalAlignment="Top" Width="155" Click="BtnProjects_Click"/>
+        <Image Margin="510,280,48.6,112.8" Source="/SPMS;component/icons8_ms_project_64px.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="128" Margin="309,282,0,0" VerticalAlignment="Top" Width="138" Source="/SPMS;component/com.project.images/icons8_idea_52px.png"/>
+        <Image HorizontalAlignment="Left" Height="126" Margin="65,282,0,0" VerticalAlignment="Top" Width="125" Source="/SPMS;component/com.project.images/icons8_groups_52px.png"/>
+        <Label Content="Welcome to System Admin Panel" HorizontalAlignment="Left" Margin="156,173,0,0" VerticalAlignment="Top" Height="43" Width="382" FontSize="25"/>
+        <Image HorizontalAlignment="Left" Height="72" Margin="35,31,0,0" VerticalAlignment="Top" Width="75" Source="/SPMS;component/com.project.images/icons8_name_52px_1.png"/>
+        <Label x:Name="lblUsername" Content="" HorizontalAlignment="Left" Margin="35,108,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="615,31,0,0" VerticalAlignment="Top" Width="75" Height="56" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/SPMS;component/com.project.images/icons8_shutdown_52px.png"/>
+            </Button.Background>
+        </Button>
+
+
+    </Grid>
+</Window>

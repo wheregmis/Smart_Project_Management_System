@@ -1,0 +1,40 @@
+﻿<Window x:Class="SPMS.com.project.views.employeePanel.ManageIssues"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPMS.com.project.views.employeePanel"
+        mc:Ignorable="d"
+        Title="ManageIssues" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/SPMS;component/com.project.images/background.jpg"/>
+        </Grid.Background>
+        <TabControl HorizontalAlignment="Left" Height="0" Margin="324,87,0,0" VerticalAlignment="Top" Width="130">
+            <TabItem Header="My Issues">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Others Issues">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <ListView x:Name="listIssues" HorizontalAlignment="Left" Height="211" Margin="64,114,0,0" VerticalAlignment="Top" Width="649" MouseDoubleClick="mouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Header="ID" DisplayMemberBinding="{Binding issue_id}"/>
+                    <GridViewColumn Header="Issue Title" DisplayMemberBinding="{Binding issue_title}"/>
+                    <GridViewColumn Header="Issue by" DisplayMemberBinding="{Binding employee_name}"/>
+                    
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="List of Issues:" HorizontalAlignment="Left" Margin="249,37,0,0" VerticalAlignment="Top" Width="205" FontSize="25"/>
+        <Button Content="Report Issue" HorizontalAlignment="Left" Margin="306,347,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click" Height="29"/>
+        <Button  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="38" Height="38" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/SPMS;component/com.project.images/icons8_left_circular_52px.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
